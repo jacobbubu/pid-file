@@ -1,0 +1,28 @@
+{
+  "name": "pid-file",
+  "version": "0.0.0",
+  "description": "create pid file",
+  "main": "index.js",
+  "scripts": {
+    "test": "coffee test/test.coffee",
+    "prepublish": "grunt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/js-seth-h/pid-file.git"
+  },
+  "keywords": [
+    "pid",
+    "file"
+  ],
+  "author": "js.seth.h@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/js-seth-h/pid-file/issues"
+  },
+  "homepage": "https://github.com/js-seth-h/pid-file",
+  "devDependencies": {
+    "grunt": "^0.4.4",
+    "grunt-contrib-coffee": "^0.10.1"
+  }
+}
