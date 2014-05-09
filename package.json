@@ -1,6 +1,6 @@
 {
   "name": "pid-file",
-  "version": "0.0.0",
+  "version": "0.2.0",
   "description": "create pid file",
   "main": "index.js",
   "scripts": {
