@@ -1,11 +1,14 @@
 {
   "name": "pid-file",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "create pid file",
-  "main": "index.js",
+  "main": "lib",
   "scripts": {
-    "test": "coffee test/test.coffee",
-    "prepublish": "grunt"
+    "build": "coffee -c -b -o lib src  ",
+    "clean": "rm -r lib",
+    "prepublish": "npm run-script build",
+    "postpublish": "npm run-script clean",
+    "test": "jasmine-node --coffee  --verbose spec"
   },
   "repository": {
     "type": "git",
@@ -20,9 +23,5 @@
   "bugs": {
     "url": "https://github.com/js-seth-h/pid-file/issues"
   },
-  "homepage": "https://github.com/js-seth-h/pid-file",
-  "devDependencies": {
-    "grunt": "^0.4.4",
-    "grunt-contrib-coffee": "^0.10.1"
-  }
+  "homepage": "https://github.com/js-seth-h/pid-file"
 }
