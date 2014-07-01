@@ -13,8 +13,7 @@ describe 'pid-file', ()->
       filename : 'pidfile.pid'
 
 
-    pathname = pid.path  
-      filename : 'pidfile.pid'
+    pathname = pid.path  'pidfile.pid'
 
     expect( fs.existsSync pathname  ).toEqual true
     done()

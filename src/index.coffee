@@ -8,8 +8,8 @@ ctx = {}
 PIDFILE = 
   create : (options)->
     ctx = options 
-    ctx.path = PIDFILE.path options
-    
+    ctx.path = PIDFILE.path options.filename
+
     pid = process.pid
 
     if ctx.errorOnExist is true
@@ -20,8 +20,8 @@ PIDFILE =
     if ctx.deleteOnExit is true 
       process.on 'exit', ()-> PIDFILE.delete()
 
-  path : (options)->
-    return path.join os.tmpDir(), options.filename
+  path : (filename)->
+    return path.join os.tmpDir(), filename
     
 
 
