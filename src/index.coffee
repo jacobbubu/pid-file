@@ -6,9 +6,9 @@ path = require 'path'
 ctx = {}
 
 PIDFILE = 
-  create : (options = {})->
+  create : (options)->
     ctx = options 
-    ctx.path = path.join os.tmpDir(), ctx.filename
+    ctx.path = PIDFILE.path options
     
     pid = process.pid
 
@@ -20,6 +20,9 @@ PIDFILE =
     if ctx.deleteOnExit is true 
       process.on 'exit', ()-> PIDFILE.delete()
 
+  path : (options)->
+    return path.join os.tmpDir(), options.filename
+    
 
 
   delete : ()=> 
