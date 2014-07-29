@@ -8,7 +8,7 @@ ctx = {}
 PIDFILE = 
   create : (options)->
     ctx = options 
-    ctx.path = PIDFILE.path options.filename
+    ctx.path = PIDFILE.path options.filename, options.local
 
     pid = process.pid
 
@@ -20,11 +20,10 @@ PIDFILE =
     if ctx.deleteOnExit is true 
       process.on 'exit', ()-> PIDFILE.delete()
 
-  path : (filename)->
+  path : (filename, local)->
+    return filename if local
     return path.join os.tmpDir(), filename
     
-
-
   delete : ()=> 
     fs.unlinkSync ctx.path
 
