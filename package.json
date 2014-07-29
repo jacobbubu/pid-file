@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/js-seth-h/pid-file/issues"
   },
-  "homepage": "https://github.com/js-seth-h/pid-file"
+  "homepage": "https://github.com/js-seth-h/pid-file",
+  "devDependencies": {
+    "jasmine-node": "^1.14.5"
+  }
 }
