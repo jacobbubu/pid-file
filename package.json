@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/js-seth-h/pid-file",
   "devDependencies": {
+    "coffee-script": "^1.7.1",
     "jasmine-node": "^1.14.5"
   }
 }
