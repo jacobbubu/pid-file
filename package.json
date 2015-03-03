@@ -1,6 +1,6 @@
 {
   "name": "pid-file",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "create pid file",
   "main": "lib",
   "scripts": {
