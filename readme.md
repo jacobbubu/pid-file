@@ -9,27 +9,27 @@
 
 pid = require 'pid-file'
 pid.create
-  path : (process.env.TMPDIR || process.env.TEMP) + '/app_name.pid'
+  filename : 'pidfile.pid'
 ```
 
-Create pid file. If exists, rewrite.
+Create pid file on `os.tmpDir()`. If exists, rewrite.
 
 ```coffee
 
 pid = require 'pid-file'
 pid.create
-  path : (process.env.TMPDIR || process.env.TEMP) + '/app_name.pid'
+  filename : 'pidfile.pid'
   errorOnExist : true
 ```
 
-Create pid file. If exists, throw Error.
+Create pid file on `os.tmpDir()` . If exists, throw Error.
 
 
 ```coffee
 
 pid = require 'pid-file'
 pid.create
-  path : (process.env.TMPDIR || process.env.TEMP) + '/app_name.pid'
+  filename : 'pidfile.pid'
   deleteOnExit : true
 ```
 
