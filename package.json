@@ -4,7 +4,7 @@
   "description": "create pid file",
   "main": "lib",
   "scripts": {
-    "build": "coffee -c -b -o lib src  ",
+    "build": "coffee -c -b --no-header -o lib src  ",
     "clean": "rm -r lib",
     "prepublish": "npm run-script build",
     "postpublish": "npm run-script clean",
@@ -14,6 +14,9 @@
     "type": "git",
     "url": "git://github.com/js-seth-h/pid-file.git"
   },
+  "files": [
+    "lib"
+  ],
   "keywords": [
     "pid",
     "file"
@@ -25,7 +28,7 @@
   },
   "homepage": "https://github.com/js-seth-h/pid-file",
   "devDependencies": {
-    "coffee-script": "^1.7.1",
+    "coffeescript": "^2.0.2",
     "jasmine-node": "^1.14.5"
   }
 }
