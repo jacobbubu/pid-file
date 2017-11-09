@@ -1,4 +1,3 @@
-
 fs = require 'fs'
 os = require 'os'
 path = require 'path'
@@ -22,7 +21,7 @@ PIDFILE =
 
   path : (filename, local)->
     return filename if local
-    return path.join os.tmpDir(), filename
+    return path.join os.tmpdir(), filename
 
   delete : ()=>
     fs.unlinkSync ctx.path
