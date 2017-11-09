@@ -6,7 +6,7 @@
   "scripts": {
     "build": "coffee -c -b --no-header -o lib src  ",
     "clean": "rm -r lib",
-    "prepublish": "npm run-script build",
+    "prepare": "npm run-script build",
     "postpublish": "npm run-script clean",
     "test": "jasmine-node --coffee  --verbose spec"
   },
