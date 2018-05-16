@@ -1,5 +1,5 @@
 {
-  "name": "pid-file",
+  "name": "@nxmix/pid-file",
   "version": "0.3.3",
   "description": "create pid file",
   "main": "lib",
@@ -14,13 +14,8 @@
     "type": "git",
     "url": "git://github.com/js-seth-h/pid-file.git"
   },
-  "files": [
-    "lib"
-  ],
-  "keywords": [
-    "pid",
-    "file"
-  ],
+  "files": ["lib"],
+  "keywords": ["pid", "file"],
   "author": "js.seth.h@gmail.com",
   "license": "MIT",
   "bugs": {
