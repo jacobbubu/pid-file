@@ -19,6 +19,8 @@ PIDFILE =
     if ctx.deleteOnExit is true
       process.on 'exit', ()-> PIDFILE.delete()
 
+    return ctx.path
+
   path : (filename, local)->
     return filename if local
     return path.join os.tmpdir(), filename
